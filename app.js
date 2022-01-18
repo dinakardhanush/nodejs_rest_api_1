@@ -18,11 +18,9 @@ app.use(express.urlencoded({extended:true}));
 app.use('/userdetails',userRouter);
 
 
-mongoose.connect(url,{useNewurlParser:true});
-const connection = mongoose.connection;
-
-connection.on('open',()=>{
-    logger.log('info','connected to db')
-})
+mongoose.connect(url,{useNewUrlParser:true})
+.then(()=>{logger.log('info',"connected to mongo db")}).catch((err)=>{
+   logger.log('error',err)
+});
 
 app.listen(port,()=>logger.log('info','server is running...'))
