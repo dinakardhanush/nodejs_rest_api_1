@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "engines": {
+    "node": "6.11.1"
+  },
   "scripts": {
     "start": "node app.js",
     "dev":"nodemon app.js"
@@ -22,9 +25,5 @@
     "@babel/node": "^7.16.7",
     "@babel/preset-env": "^7.16.7",
     "nodemon": "^2.0.15"
-  },
-  "engines": {
-    "npm": ">=7.4.3",
-    "node": ">=15.7.0"
   }
 }
