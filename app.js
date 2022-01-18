@@ -9,7 +9,7 @@ const userRouter = require('./routes/users');
 //dotenv
 require('dotenv').config();
 const url = process.env.MONGO_URL;
-const port = process.env.PORT || 8000;
+const port = process.env.port || 8000;
 
 
 //middleware
